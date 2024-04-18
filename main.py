@@ -29,7 +29,7 @@ async def on_ready():
 @commands.is_owner()
 async def sync(interaction: discord.Interaction):
     synced = await bot.tree.sync()
-    interaction.response.send_message(
+    await interaction.response.send_message(
         f'Synced {len(synced)} command(s)', ephemeral=True)
 
 
