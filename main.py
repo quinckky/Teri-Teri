@@ -1,19 +1,13 @@
-import os
 import re
 
 import discord
 from discord import app_commands
 from discord.ext import commands
-from dotenv import load_dotenv
 
+from config import TOKEN, WHITELIST, DATABASE_URL
 from utils.item_database_manager import ItemDatabaseManager
 from utils.item_database_manager.models import Item
 
-load_dotenv()
-TOKEN = os.environ['DISCORD_TOKEN']
-WHITELIST = [int(channel_id) for channel_id in
-             os.getenv('CHANNELS_WHITELIST').split(',')]
-DATABASE_URL = os.environ['DATABASE_URL']
 
 intents = intents = discord.Intents.all()
 bot = commands.Bot(command_prefix='/', intents=intents)
