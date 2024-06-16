@@ -43,5 +43,8 @@ env.bak/
 *.pyzw
 *.stackdump
 
-#Local environments
+# Local environments
 .env
+
+# Utils
+hg2_item_database_manager/

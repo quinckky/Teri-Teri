@@ -5,13 +5,13 @@ from discord import app_commands
 from discord.ext import commands
 
 from config import TOKEN, WHITELIST, DATABASE_URL
-from utils.item_database_manager import ItemDatabaseManager
-from utils.item_database_manager.models import Item
+from utils.hg2_item_database_manager import HG2ItemDatabaseManager
+from utils.hg2_item_database_manager.models import Item
 
 
 intents = intents = discord.Intents.all()
 bot = commands.Bot(command_prefix='/', intents=intents)
-database_manager = ItemDatabaseManager(DATABASE_URL)
+database_manager = HG2ItemDatabaseManager(DATABASE_URL)
 
 
 @bot.event

@@ -1,1 +1,1 @@
-from .item_database_manager import item_database_manager
+from .hg2_item_database_manager import hg2_item_database_manager
